@@ -1,12 +1,35 @@
 {% extends 'base.html'%}
 {% block content %}
-
-        {% for mod in mods %}
-        {{mod.mod_name}}
-        {{mod.category_name}}
-        {{mod.mod_description}}
-        {{mod.mod_link}}
-        {{mod.is_must_have}}
-        {% endfor %}
-        
+		<ul class="collapsible">
+			{% for mod in mods %}
+			<li>
+				<div class="collapsible-header">
+				
+					<div class=" mod_header col s9">
+						<i class="material-icons">expand_more</i><strong>{{mod.mod_name}}</strong>
+					</div>
+				</div>
+				<div class="collapsible-body">
+					<span>
+						{{mod.category_name}}
+					</span>
+				</div>
+				<div class="collapsible-body">
+					<span>
+						{{mod.mod_description}}
+				    </span>
+				</div>
+				<div class="collapsible-body">
+					<span>
+						{{mod.mod_link}}
+					</span>
+				</div>
+				<div class="collapsible-body">
+					<span>
+						{{mod.is_must_have}}
+					</span>
+				</div>
+			</li>
+			{% endfor %}
+		</ul>
 {% endblock %}
