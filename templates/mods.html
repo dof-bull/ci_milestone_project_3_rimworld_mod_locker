@@ -1,14 +1,12 @@
-<html>
-    <head>
+{% extends 'base.html'%}
+{% block content %}
 
-    </head>
-    <body>
         {% for mod in mods %}
-            {{mod.mod_name}}
-            {{mod.category_name}}
-            {{mod.mod_description}}
-            {{mod.mod_link}}
-            {{mod.is_must_have}}
-		{% endfor %}
-    </body>
-</html>
+        {{mod.mod_name}}
+        {{mod.category_name}}
+        {{mod.mod_description}}
+        {{mod.mod_link}}
+        {{mod.is_must_have}}
+        {% endfor %}
+        
+{% endblock %}
