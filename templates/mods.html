@@ -1,0 +1,14 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        {% for mod in mods %}
+            {{mod.mod_name}}
+            {{mod.category_name}}
+            {{mod.mod_description}}
+            {{mod.mod_link}}
+            {{mod.is_must_have}}
+		{% endfor %}
+    </body>
+</html>
