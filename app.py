@@ -13,10 +13,23 @@ app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
 
 mongo = PyMongo(app)
 
+
 @app.route('/')
 @app.route('/get_mods')
 def get_mods():
     return render_template("mods.html", mods=mongo.db.mods.find())
+
+
+@app.route('/add_mod')
+def add_mod():
+    return render_template('addmod.html', categories=mongo.db.categories.find())
+
+
+@app.route('/insert_mod', methods=['POST'])
+def insert_mod():
+    mods = mongo.db.mods
+    mods.insert_one(request.form.to_dict())
+    return redirect(url_for('get_mods'))
 
 
 if __name__ == '__main__':
