@@ -39,6 +39,20 @@ def edit_mod(mod_id):
     return render_template('editmod.html', mod=the_mod, categories=all_categories)
 
 
+@app.route('/update_mod/<mod_id>', methods=["POST"])
+def update_mod(mod_id):
+    mods = mongo.db.mods
+    mods.update({'_id': ObjectId(mod_id)},
+                 {
+        'mod_name': request.form.get('mod_name'),
+        'category_name': request.form.get('category_name'),
+        'mod_description': request.form.get('mod_description'),
+        'mod_link': request.form.get('mod_link'),
+        'is_must_have': request.form.get('is_must_have')
+    })
+    return redirect(url_for('get_mods'))
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
