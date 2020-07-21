@@ -32,6 +32,13 @@ def insert_mod():
     return redirect(url_for('get_mods'))
 
 
+@app.route('/edit_mod/<mod_id>')
+def edit_mod(mod_id):
+    the_mod = mongo.db.mods.find_one({"_id": ObjectId(mod_id)})
+    all_categories = mongo.db.categories.find()
+    return render_template('editmod.html', mod=the_mod, categories=all_categories)
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
