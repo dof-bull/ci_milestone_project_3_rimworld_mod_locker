@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 {% extends 'base.html'%}{% block content %}
 
 <div class="row">
@@ -10,12 +11,13 @@
 
                 <div class="col s3">
 
-                        <!-- Buttons -->
-                        <i class="material-icons">expand_more</i>
-                        <a href="{{url_for('edit_mod', mod_id=mod._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
-                        <a href="{{url_for('delete_mod', mod_id=mod._id)}}" class="waves-effect waves-light btn btn_small red">Delete</a>
-                </div>
+                    <!-- Buttons -->
+                    <i class="material-icons">expand_more</i>
+                    <a href="{{url_for('edit_mod', mod_id=mod._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
+                    <a href="{{url_for('delete_mod', mod_id=mod._id)}}" class="waves-effect waves-light btn btn_small red">Delete</a>
 
+                </div>
+            
                 <!-- Mod Name -->
                 <div class="mod_header col s9">
                     <strong>{{mod.mod_name}}</strong>
@@ -48,6 +50,7 @@
 
 </div>
 <div class="row">
+
 	<!-- Add Mod Button -->
 	<a href="{{url_for('add_mod')}}" class="waves-effect waves-light btn blue"><i class="material-icons right">playlist_add</i>Add Mod</a>
 </div>
