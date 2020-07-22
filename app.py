@@ -18,8 +18,8 @@ mongo = PyMongo(app)
 
 
 @app.route('/')
-@app.route('/get_mods')
-def get_mods():
+@app.route('/browse_mods')
+def browse_mods():
     return render_template("mods.html", mods=mongo.db.mods.find().sort(
         "mod_name"))
 
@@ -39,7 +39,7 @@ def add_mod():
 def insert_mod():
     mods = mongo.db.mods
     mods.insert_one(request.form.to_dict())
-    return redirect(url_for('get_mods'))
+    return redirect(url_for('browse_mods'))
 
 
 # Edit Mod
@@ -64,7 +64,7 @@ def update_mod(mod_id):
         'mod_link': request.form.get('mod_link'),
         'is_must_have': request.form.get('is_must_have')
     })
-    return redirect(url_for('get_mods'))
+    return redirect(url_for('browse_mods'))
 
 
 # Delete Mod
@@ -73,7 +73,7 @@ def update_mod(mod_id):
 @app.route('/delete_mod/<mod_id>')
 def delete_mod(mod_id):
     mongo.db.mods.remove({'_id': ObjectId(mod_id)})
-    return redirect(url_for('get_mods'))
+    return redirect(url_for('browse_mods'))
 
 
 # Categories Page

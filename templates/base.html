@@ -31,19 +31,19 @@
 			<!-- Nav Bar from Materialize -->
 			<nav>
 				<div class="nav-wrapper">
-					<a href="{{url_for('get_mods')}}" class="brand-logo">Rimworld Mod Locker</a>
+					<a href="{{url_for('browse_mods')}}" class="brand-logo">Rimworld Mod Locker</a>
 					<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 					<ul id="nav-mobile" class="right hide-on-med-and-down">
-						<li><a href="{{url_for('get_mods')}}">Home</a></li>
+						<li><a href="{{url_for('browse_mods')}}">Home</a></li>
 						<li><a href="{{url_for('add_mod')}}">Add Mod</a></li>
 						<li><a href="{{url_for('get_categories')}}">Manage Categories</a></li>
-						<li><a target="_blank" href="https://rimworldgame.com/">Offical Site</a></li>
+						<li><a target="_blank" href="https://rimworldgame.com/" rel="noopener">Offical Site</a></li>
 					</ul>
 					<ul class="side-nav" id="mobile-demo">
-						<li><a href="{{url_for('get_mods')}}">Home</a></li>
+						<li><a href="{{url_for('browse_mods')}}">Home</a></li>
 						<li><a href="{{url_for('add_mod')}}">Add Mod</a></li>
 						<li><a href="{{url_for('get_categories')}}">Manage Categories</a></li>
-						<li><a target="_blank" href="https://rimworldgame.com/">Offical Site</a></li>
+						<li><a target="_blank" href="https://rimworldgame.com/" rel="noopener">Offical Site</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -61,7 +61,7 @@
 			<div class="footer-copyright">
 				<div class="container">
 					<p class="left">This is a fan site only. Not affliated with Ludeon Studios.</p>
-					<p class="right"><a target="_blank" href="https://github.com/dof-bull">dof-bull <i class="fa fa-github" aria-hidden="true"></i></a></p>
+					<p class="right"><a target="_blank" href="https://github.com/dof-bull" rel="noopener">dof-bull <i class="fa fa-github" aria-hidden="true"></i></a></p>
 				</div>
 			</div>
 		</footer>
