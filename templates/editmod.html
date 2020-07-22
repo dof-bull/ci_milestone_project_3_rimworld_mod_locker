@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 {% extends 'base.html'%}{% block content %}
 
-<h3>Edit Mod</h3>
+<h3 class="page-title">Edit Mod</h3>
+
 <div class="row">
 	<form action="{{ url_for('update_mod', mod_id=mod._id)}}" method="POST" class="col s12">
 		<div class="row">

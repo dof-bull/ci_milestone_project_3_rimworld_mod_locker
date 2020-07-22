@@ -15,6 +15,7 @@ body {
     background-size: cover;
 }
 
+/*------------- Collapsibles -------------*/
 
 .collapsible-header {
     background-color: #14171a;
@@ -61,4 +62,13 @@ nav ul a {
 .mod_header {
     margin-top: 5px;
     margin-left: 20px;
+}
+
+/*------------- Page Title -------------*/
+
+.page-title {
+    color: black;
+    -webkit-text-fill-color: #c6c6c6;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
 }
