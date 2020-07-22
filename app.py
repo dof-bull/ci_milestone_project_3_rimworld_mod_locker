@@ -20,7 +20,8 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/get_mods')
 def get_mods():
-    return render_template("mods.html", mods=mongo.db.mods.find())
+    return render_template("mods.html", mods=mongo.db.mods.find().sort(
+        "mod_name"))
 
 
 # Add Mod
@@ -29,7 +30,8 @@ def get_mods():
 @app.route('/add_mod')
 def add_mod():
     return render_template(
-        'addmod.html', categories=mongo.db.categories.find()
+        'addmod.html', categories=mongo.db.categories.find().sort(
+            "category_name")
         )
 
 
@@ -46,7 +48,7 @@ def insert_mod():
 @app.route('/edit_mod/<mod_id>')
 def edit_mod(mod_id):
     the_mod = mongo.db.mods.find_one({"_id": ObjectId(mod_id)})
-    all_categories = mongo.db.categories.find()
+    all_categories = mongo.db.categories.find().sort("category_name")
     return render_template(
         'editmod.html', mod=the_mod, categories=all_categories
         )
@@ -80,7 +82,8 @@ def delete_mod(mod_id):
 @app.route('/get_categories')
 def get_categories():
     return render_template('categories.html',
-                           categories=mongo.db.categories.find())
+                           categories=mongo.db.categories.find().sort(
+                               "category_name"))
 
 
 # Add Category
