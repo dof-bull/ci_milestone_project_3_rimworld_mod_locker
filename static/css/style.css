@@ -12,6 +12,13 @@ body {
     background-image: url(https://rimworldgame.com//images/BGPlanet2.jpg);
     background-repeat: no-repeat;
     background-position: top center;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+flex: 1 0 auto;
 }
 
 /*------------- Collapsibles -------------*/
@@ -72,4 +79,27 @@ nav ul a {
     -webkit-text-fill-color: #c6c6c6;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
+}
+
+/*------------- Footer -------------*/
+
+footer.page-footer {
+    background-color: #14171a;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+}
+
+.page-footer p {
+    font-family: Calibri, Tahoma, Sans Serif;
+    font-size: 100%;
+    color: #c6c6c6;
+    padding: 0, 0;
+    text-decoration: none;
+}
+
+.page-footer p a {
+    color: #c6c6c6;
+    text-decoration: none;
 }

@@ -5,8 +5,13 @@
 		<!-- Meta Data -->
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Rimworld Mod Locker</title>
+		<meta name="description" content="Rimworld Mod Locker - A fan-made mod browsing site">
+		<meta name="keywords" content="Rimworld, mods, mod collection, mod browsing">
+		<meta name="author" content="Donal O'Farrell">
 
+		<!-- Font Awesome Icons Link -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+        
 		<!-- Materialize Icons Link -->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -16,6 +21,8 @@
         <!-- Custom CSS Link -->
         <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css">
 
+		<!-- Page Title -->
+		<title>Rimworld Mod Locker</title>
 
     </head>
     <body>
@@ -43,9 +50,21 @@
 
         </header>
 
-        <div class="container">
-            {% block content %}{% endblock %}
-		</div>
+        <main>
+            <div class="container">
+                {% block content %}{% endblock %}
+            </div>
+        </main>
+
+		<!-- Footer from Materialize -->
+		<footer class="page-footer">
+			<div class="footer-copyright">
+				<div class="container">
+					<p class="left">This is a fan site only. Not affliated with Ludeon Studios.</p>
+					<p class="right"><a target="_blank" href="https://github.com/dof-bull">dof-bull <i class="fa fa-github" aria-hidden="true"></i></a></p>
+				</div>
+			</div>
+		</footer>
 
         <!-- jQuery Link -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
@@ -53,6 +72,7 @@
 		<!-- Materialize Javascript Link -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
+		<!-- Custom Javascript -->
         <script type="text/javascript">
             $(document).ready(function() {
 				$('.collapsible').collapsible();
