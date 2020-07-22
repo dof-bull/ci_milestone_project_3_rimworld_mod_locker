@@ -21,6 +21,10 @@ main {
 flex: 1 0 auto;
 }
 
+.row {
+    border-color: #313131;
+}
+
 /*------------- Nav Bar -------------*/
 
 .nav-wrapper {
@@ -59,10 +63,16 @@ nav ul a {
 
 .collapsible-header {
     background-color: #14171a;
+    border-color: #313131;
 }
 
 .collapsible-body {
     background-color: #313131;
+}
+
+.mod_header {
+    margin-top: 5px;
+    margin-left: 20px;
 }
 
 .subheadings{
@@ -82,11 +92,31 @@ nav ul a {
     justify-content: center;
 }
 
-.mod_header {
-    margin-top: 5px;
-    margin-left: 20px;
+.btn_gold {
+    background-color: #dbd469;
+    font-weight: bold;
+    color: black;
 }
 
+.btn_gold i {
+    font-weight: bold;
+    color: black;
+}
+
+.btn_red{
+    background-color: #4b100c;
+    font-weight: bold;
+    color: black;
+}
+
+.btn_red i {
+    font-weight: bold;
+    color: black;
+}
+
+.btn:hover {
+    background-color: #c6c6c6;
+}
 
 /*------------- Footer -------------*/
 
