@@ -80,6 +80,16 @@ nav ul a {
     font-weight: bold;
 }
 
+/*------------- Input Fields -------------*/
+
+.input-dark {
+    background-color: #14171a;
+    border-color: #313131;
+    color: #c6c6c6;
+    padding: 10px;
+}
+
+
 /*------------- Buttons -------------*/
 
 .btn_small {
@@ -122,6 +132,7 @@ nav ul a {
 
 footer.page-footer {
     background-color: #14171a;
+    margin-top: 20px;
     padding-top: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
