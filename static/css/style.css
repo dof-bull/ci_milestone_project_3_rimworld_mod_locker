@@ -1,3 +1,5 @@
+/*------------- Main Elements -------------*/
+
 * {
     font-family: Calibri, Tahoma, Sans Serif;
     font-size: 100%;
@@ -13,6 +15,39 @@ body {
     background-size: cover;
 }
 
+
+.collapsible-header {
+    background-color: #14171a;
+}
+
+.collapsible-body {
+    background-color: #313131;
+}
+
+/*------------- Nav Bar -------------*/
+
+.nav-wrapper {
+    background-color: #14171a;
+}
+
+nav .brand-logo {
+    color: #c6c6c6;
+    display: inline-block;
+    font-size: 200%;
+    padding-top: 0px;
+    padding-right: 15px;
+    padding-bottom: 0px;
+    padding-left: 15px;
+}
+
+nav ul a {
+    color: #c6c6c6;
+    display: block;
+    padding: 0 15px;
+}
+
+/*------------- Buttons -------------*/
+
 .btn_small {
     height: 24px;
     width: 60px;
@@ -25,4 +60,5 @@ body {
 
 .mod_header {
     margin-top: 5px;
+    margin-left: 20px;
 }
