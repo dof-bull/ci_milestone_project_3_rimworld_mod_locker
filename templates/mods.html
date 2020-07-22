@@ -28,23 +28,20 @@
 
             <!-- Category -->
             <div class="collapsible-body">
-                <span>
-                    {{mod.category_name}}
-                </span>
+                <span class="subheadings">CATEGORY:</span>
+                <span>{{mod.category_name}}</span>
             </div>
             
             <!-- Mod Description -->
             <div class="collapsible-body">
-                <span>
-                    {{mod.mod_description}}
-                </span>
+				<span class="subheadings">DESCRIPTION:</span>
+                <span>{{mod.mod_description}}</span>
             </div>
 
             <!-- Mod Link -->
             <div class="collapsible-body">
-                <span>
-                    {{mod.mod_link}}
-                </span>
+				<span class="subheadings">LINK:</span>
+				<a target="_blank" href="{{mod.mod_link}}">{{mod.mod_link}}</a>
             </div>
         </li>
         {% endfor %}

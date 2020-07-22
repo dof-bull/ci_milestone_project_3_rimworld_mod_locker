@@ -21,16 +21,6 @@ main {
 flex: 1 0 auto;
 }
 
-/*------------- Collapsibles -------------*/
-
-.collapsible-header {
-    background-color: #14171a;
-}
-
-.collapsible-body {
-    background-color: #313131;
-}
-
 /*------------- Nav Bar -------------*/
 
 .nav-wrapper {
@@ -42,17 +32,43 @@ nav .brand-logo {
     -webkit-text-fill-color: #c6c6c6;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
-    display: inline-block;
+    display: absolute;
     padding-top: 0px;
     padding-right: 15px;
     padding-bottom: 0px;
     padding-left: 15px;
+    font-size: 200%;
 }
 
 nav ul a {
     color: #c6c6c6;
     display: block;
     padding: 0 15px;
+}
+
+/*------------- Page Title -------------*/
+
+.page-title {
+    color: black;
+    -webkit-text-fill-color: #c6c6c6;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+/*------------- Collapsibles -------------*/
+
+.collapsible-header {
+    background-color: #14171a;
+}
+
+.collapsible-body {
+    background-color: #313131;
+}
+
+.subheadings{
+    color: #14171a;
+    font-weight: bold;
+    padding-right: 20px;
 }
 
 /*------------- Buttons -------------*/
@@ -72,14 +88,6 @@ nav ul a {
     margin-left: 20px;
 }
 
-/*------------- Page Title -------------*/
-
-.page-title {
-    color: black;
-    -webkit-text-fill-color: #c6c6c6;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-}
 
 /*------------- Footer -------------*/
 
