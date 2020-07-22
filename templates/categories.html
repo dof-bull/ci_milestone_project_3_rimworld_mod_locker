@@ -5,29 +5,30 @@
 
 	<h3 class="page-title">Manage Categories</h3>
 
-    <ul class="collapsible">
-        {% for category in categories %}
-        <li>
-            <div class="collapsible-header">
+	<ul class="collapsible">
+		{% for category in categories %}
+		<li>
+			<div class="collapsible-header">
 
 				<!-- Buttons -->
-                <a href="{{ url_for('edit_category', category_id =category._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
+				<a href="{{ url_for('edit_category', category_id =category._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
 				<a href="{{url_for('delete_category', category_id=category._id)}}" class="waves-effect waves-light btn btn_small red">Delete</a>
 
 				<!-- Category Names -->
-                <div class="mod_header col s9">
-                    <strong>{{category.category_name}}</strong>
-                </div>
+				<div class="mod_header col s9">
+					<strong>{{category.category_name}}</strong>
+				</div>
             </div>
-        </li>
-        {% endfor %}
-    </ul>
+		</li>
+		{% endfor %}
+	</ul>
 
 </div>
 <div class="row">
 
 	<!-- Add Category Button -->
-	<a href="{{url_for('add_category')}}" class="waves-effect waves-light btn blue"><i class="material-icons right">playlist_add</i>Add Category</a>
+	<a href="{{url_for('add_category')}}"
+		class="waves-effect waves-light btn blue"><i class="material-icons right">playlist_add</i>Add Category</a>
 </div>
 
 {% endblock %}

@@ -9,10 +9,9 @@
 body {
     font-family: Calibri, Tahoma, Sans Serif;
     background-color: #000000;
-    background-image: url(/static/images/BGPlanet.jpg);
+    background-image: url(https://rimworldgame.com//images/BGPlanet2.jpg);
     background-repeat: no-repeat;
     background-position: top center;
-    background-size: cover;
 }
 
 /*------------- Collapsibles -------------*/
@@ -32,9 +31,11 @@ body {
 }
 
 nav .brand-logo {
-    color: #c6c6c6;
+    color: black;
+    -webkit-text-fill-color: #c6c6c6;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
     display: inline-block;
-    font-size: 200%;
     padding-top: 0px;
     padding-right: 15px;
     padding-bottom: 0px;
