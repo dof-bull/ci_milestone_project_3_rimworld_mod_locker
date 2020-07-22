@@ -31,12 +31,19 @@ flex: 1 0 auto;
     background-color: #14171a;
 }
 
+nav img {
+    display: inline-block;
+    width: 5%;
+    height: 5%;
+    margin-right: 5px;
+}
+
 nav .brand-logo {
     color: black;
     -webkit-text-fill-color: #c6c6c6;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
-    display: absolute;
+    display: inline-block;
     padding-top: 0px;
     padding-right: 15px;
     padding-bottom: 0px;
@@ -87,6 +94,16 @@ nav ul a {
     border-color: #313131;
     color: #c6c6c6;
     padding: 10px;
+}
+
+.select-dropdown {
+    background-color: #14171a;
+    border-color: #313131;
+    color: #c6c6c6;
+}
+
+.select-wrapper ul li span {
+     color: #c6c6c6;
 }
 
 
