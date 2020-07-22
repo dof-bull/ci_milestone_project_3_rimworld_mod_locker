@@ -7,7 +7,7 @@
 			<div class="col s3">
                     <i class="material-icons">expand_more</i>
                     <a href="{{url_for('edit_mod', mod_id=mod._id)}}" class="waves-effect waves-light btn btn_small">Edit</a>
-                    <a class="waves-effect waves-light btn btn_small blue">Done</a>
+                    <a href="{{url_for('delete_mod', mod_id=mod._id)}}" class="waves-effect waves-light btn btn_small red">Delete</a>
             </div>
 			<div class="mod_header col s9">
 				<strong>{{mod.mod_name}}</strong>

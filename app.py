@@ -53,6 +53,12 @@ def update_mod(mod_id):
     return redirect(url_for('get_mods'))
 
 
+@app.route('/delete_mod/<mod_id>')
+def delete_mod(mod_id):
+    mongo.db.mods.remove({'_id': ObjectId(mod_id)})
+    return redirect(url_for('get_mods'))
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
