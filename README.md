@@ -10,3 +10,9 @@ RimWorld is an indie space colony management game developed by Ludeon Studios, a
 [Rimworld Mod Locker](https://rimworld-mod-locker.herokuapp.com/) aims to create a site where users can upload new mods with its name, description, category, image and a link to where it can be downloaded.
 
 [Heroku Link](https://rimworld-mod-locker.herokuapp.com/)
+
+
+Credits:
+
+Stack Overflow
+Materialize css formatting form inputs (https://stackoverflow.com/questions/48936394/q-materialize-css-formatting-form-inputs)

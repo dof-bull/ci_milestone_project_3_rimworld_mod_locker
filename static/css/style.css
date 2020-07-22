@@ -97,13 +97,52 @@ nav ul a {
 }
 
 .select-dropdown {
-    background-color: #14171a;
-    border-color: #313131;
+    background-color: #313131;
+    border-color: #14171a;
     color: #c6c6c6;
 }
 
 .select-wrapper ul li span {
      color: #c6c6c6;
+}
+
+.active {
+    color: #c6c6c6 !important;
+}
+
+.active::after {
+    color: #c6c6c6 !important;
+    border-bottom: 5px solid #c6c6c6 !important;
+}
+
+/*------------- Taken From Stack Overflow -------------*/
+
+/* label color */
+.input-field label {
+    color: #c6c6c6;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+    color: #c6c6c6  !important;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #c6c6c6 !important;
+    box-shadow: 0 1px 0 0 #c6c6c6  !important;
+}
+/* valid color */
+.input-field input[type=text].valid {
+    border-bottom: 1px solid #c6c6c6  !important;
+    box-shadow: 0 1px 0 0 #c6c6c6  !important;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+    border-bottom: 1px solid #c6c6c6;
+    box-shadow: 0 1px 0 0 #c6c6c6;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+    color: #c6c6c6;
 }
 
 
@@ -168,3 +207,4 @@ footer.page-footer {
     color: #c6c6c6;
     text-decoration: none;
 }
+
