@@ -1,45 +1,56 @@
 {% extends 'base.html'%}{% block content %}
 
-<ul class="collapsible">
-    {% for mod in mods %}
-    <li>
-        <div class="collapsible-header">
+<div class="row">
 
-			<div class="col s3">
+
+    <ul class="collapsible">
+        {% for mod in mods %}
+        <li>
+            <div class="collapsible-header">
+
+                <div class="col s3">
+
+                        <!-- Buttons -->
+                        <i class="material-icons">expand_more</i>
+                        <a href="{{url_for('edit_mod', mod_id=mod._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
+                        <a href="{{url_for('delete_mod', mod_id=mod._id)}}" class="waves-effect waves-light btn btn_small red">Delete</a>
+                </div>
+
+                <!-- Mod Name -->
+                <div class="mod_header col s9">
+                    <strong>{{mod.mod_name}}</strong>
+                </div>
+            </div>
+
+            <!-- Category -->
+            <div class="collapsible-body">
+                <span>
+                    {{mod.category_name}}
+                </span>
+            </div>
             
-					<!-- Buttons -->
-                    <i class="material-icons">expand_more</i>
-                    <a href="{{url_for('edit_mod', mod_id=mod._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
-                    <a href="{{url_for('delete_mod', mod_id=mod._id)}}" class="waves-effect waves-light btn btn_small red">Delete</a>
+            <!-- Mod Description -->
+            <div class="collapsible-body">
+                <span>
+                    {{mod.mod_description}}
+                </span>
             </div>
 
-			<!-- Mod Name -->
-			<div class="mod_header col s9">
-				<strong>{{mod.mod_name}}</strong>
+            <!-- Mod Link -->
+            <div class="collapsible-body">
+                <span>
+                    {{mod.mod_link}}
+                </span>
             </div>
-        </div>
+        </li>
+        {% endfor %}
+    </ul>
 
-		<!-- Category -->
-        <div class="collapsible-body">
-            <span>
-                {{mod.category_name}}
-            </span>
-        </div>
-        
-		<!-- Mod Description -->
-        <div class="collapsible-body">
-            <span>
-                {{mod.mod_description}}
-            </span>
-        </div>
+</div>
+<div class="row">
+	<!-- Add Mod Button -->
+	<a href="{{url_for('add_mod')}}" class="waves-effect waves-light btn blue"><i class="material-icons right">playlist_add</i>Add Mod</a>
+</div>
 
-		<!-- Mod Link -->
-        <div class="collapsible-body">
-            <span>
-                {{mod.mod_link}}
-            </span>
-        </div>
-    </li>
-    {% endfor %}
-</ul>
+
 {% endblock %}
