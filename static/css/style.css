@@ -1,3 +1,18 @@
+* {
+    font-family: Calibri, Tahoma, Sans Serif;
+    font-size: 100%;
+    color: #c6c6c6;
+}
+
+body {
+    font-family: Calibri, Tahoma, Sans Serif;
+    background-color: #000000;
+    background-image: url(/static/images/BGPlanet.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
 .btn_small {
     height: 24px;
     width: 60px;
