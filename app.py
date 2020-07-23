@@ -24,7 +24,7 @@ def browse_mods():
                             "mods.html", mods=mongo.db.mods.find(
                                  ).sort("mod_name"),
                             categories=mongo.db.categories.find(
-                                ).sort("category_name"))
+                            ).sort("category_name"), page_title="Browse Mods")
 
 
 # About Page
@@ -32,7 +32,7 @@ def browse_mods():
 
 @app.route('/about')
 def about():
-    return render_template("about.html")
+    return render_template("about.html", page_title="About")
 
 
 # Add Mod
@@ -42,7 +42,7 @@ def about():
 def add_mod():
     return render_template(
         'addmod.html', categories=mongo.db.categories.find().sort(
-            "category_name")
+            "category_name"), page_title="Add Mod"
         )
 
 
@@ -61,8 +61,8 @@ def edit_mod(mod_id):
     the_mod = mongo.db.mods.find_one({"_id": ObjectId(mod_id)})
     all_categories = mongo.db.categories.find().sort("category_name")
     return render_template(
-        'editmod.html', mod=the_mod, categories=all_categories
-        )
+        'editmod.html', mod=the_mod, categories=all_categories, page_title="Edit Mods"
+)
 
 
 @app.route('/update_mod/<mod_id>', methods=["POST"])
@@ -94,7 +94,7 @@ def delete_mod(mod_id):
 def get_categories():
     return render_template('categories.html',
                            categories=mongo.db.categories.find().sort(
-                               "category_name"))
+                               "category_name"), page_title="Manage Catergories")
 
 
 # Add Category
@@ -102,7 +102,7 @@ def get_categories():
 
 @app.route('/add_category')
 def add_category():
-    return render_template('addcategory.html')
+    return render_template('addcategory.html', page_title="Add Category")
 
 
 @app.route('/insert_category', methods=['POST'])
@@ -119,7 +119,7 @@ def insert_category():
 def edit_category(category_id):
     return render_template('editcategory.html',
                            category=mongo.db.categories.find_one(
-                               {'_id': ObjectId(category_id)}))
+                               {'_id': ObjectId(category_id)}), page_title="Edit Category")
 
 
 @app.route('/update_category/<category_id>', methods=['POST'])

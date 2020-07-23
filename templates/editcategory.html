@@ -3,7 +3,7 @@
 
 <div class="row">
 
-    <h3 class="page-title">Edit Category</h3>
+    <h3 class="page-title">{{ page_title }}</h3>
 
     <div class="row input-dark">
         <form action="{{url_for('update_category', category_id=category._id) }}" method="POST" class="col s12">
