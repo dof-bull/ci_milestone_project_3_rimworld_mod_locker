@@ -8,7 +8,7 @@ if path.exists("env.py"):
 
 app = Flask(__name__)
 
-app.config["MONGO_DBNAME"] = 'rimworld_mod_locker'
+app.config["MONGO_DBNAME"] = os.getenv('MONGO_DBNAME')
 app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
 
 mongo = PyMongo(app)
