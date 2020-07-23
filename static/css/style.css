@@ -25,6 +25,7 @@ flex: 1 0 auto;
     border-color: #313131;
 }
 
+
 /*------------- Nav Bar -------------*/
 
 .nav-wrapper {
@@ -87,6 +88,9 @@ nav ul a {
     font-weight: bold;
 }
 
+ul.collapsible{
+    border-color: #c6c6c6;
+}
 /*------------- Expander Icon -------------*/
 
 div.collapsible-header.active #expander-icon {
@@ -108,6 +112,11 @@ div.collapsible-header.active #expander-icon {
     border-color: #313131;
     color: #c6c6c6;
     padding: 10px;
+}
+
+div.row.input-dark {
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 .select-dropdown {
