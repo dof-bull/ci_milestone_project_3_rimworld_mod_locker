@@ -1,63 +1,66 @@
 <!DOCTYPE html>
 {% extends 'base.html'%}{% block content %}
 
-<h3 class="page-title">Add Mod</h3>
+<div class="row">
 
-<div class="row input-dark">
-	<form action="{{url_for('insert_mod')}}" method="POST" class="col s12">
-        <div class="row">
+    <h3 class="page-title">Add Mod</h3>
 
-			<!-- Mod Name -->
-			<div class="input-field col s12">
-                <i class="material-icons prefix">build</i>
-				<input id="mod_name" name="mod_name" type="text" class="validate">
-				<label for="icon_prefix">Mod Name</label>
-			</div>
-		</div>
-		<div class="row">
+    <div class="row input-dark">
+        <form action="{{url_for('insert_mod')}}" method="POST" class="col s12">
+            <div class="row">
 
-			<!-- Category Selector -->
-			<div id="picker-input" class="input-field col s12 input-boxes">
-				<i class="material-icons prefix">poll</i>
-				<select id="category" name="category_name">
-                    <option value="" disabled selected>Choose Category</option>
-                    {% for cat in categories %}
-                        <option value="{{cat.category_name}}">{{cat.category_name}}</option>
-                    {% endfor %}
-                </select>
-				<label>Mod Category</label>
-			</div>
-		</div>
-		<div class="row">
+                <!-- Mod Name -->
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">build</i>
+                    <input id="mod_name" name="mod_name" type="text" class="validate">
+                    <label for="icon_prefix">Mod Name</label>
+                </div>
+            </div>
+            <div class="row">
 
-			<!-- Mod Description -->
-			<div class="input-field col s12">
-				<i class="material-icons prefix">subject</i>
-				<textarea id="mod_description" name="mod_description" class="materialize-textarea"></textarea>
-				<label for="icon_prefix">Mod Description</label>
-			</div>
-		</div>
-		<div class="row">
+                <!-- Category Selector -->
+                <div id="picker-input" class="input-field col s12 input-boxes">
+                    <i class="material-icons prefix">poll</i>
+                    <select id="category" name="category_name">
+                        <option value="" disabled selected>Choose Category</option>
+                        {% for cat in categories %}
+                            <option value="{{cat.category_name}}">{{cat.category_name}}</option>
+                        {% endfor %}
+                    </select>
+                    <label>Mod Category</label>
+                </div>
+            </div>
+            <div class="row">
 
-			<!-- Download Link -->
-			<div class="input-field col s12">
-				<i class="material-icons prefix">link</i>
-				<input id="mod_link" name="mod_link" type="text" class="validate">
-				<label for="icon_prefix">Download Link</label>
-			</div>
-		</div>
-		
-        <div class="row">
+                <!-- Mod Description -->
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">subject</i>
+                    <textarea id="mod_description" name="mod_description" class="materialize-textarea"></textarea>
+                    <label for="icon_prefix">Mod Description</label>
+                </div>
+            </div>
+            <div class="row">
 
-			<!-- Add Mod Button -->
-			<button class="btn waves-effect waves-light btn_gold" type="submit" name="action">Add Mod
-			    <i class="material-icons right">playlist_add</i>
-			</button>
+                <!-- Download Link -->
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">link</i>
+                    <input id="mod_link" name="mod_link" type="text" class="validate">
+                    <label for="icon_prefix">Download Link</label>
+                </div>
+            </div>
+            
+            <div class="row">
 
-			<!-- Cancel Button -->
-			<a href="{{url_for('browse_mods')}}" class="waves-effect waves-light btn btn_red"><i class="material-icons right">cancel</i>Cancel</a>
-        </div>
-	</form>
+                <!-- Add Mod Button -->
+                <button class="btn waves-effect waves-light btn_gold" type="submit" name="action">Add Mod
+                    <i class="material-icons right">playlist_add</i>
+                </button>
+
+                <!-- Cancel Button -->
+                <a href="{{url_for('browse_mods')}}" class="waves-effect waves-light btn btn_red"><i class="material-icons right">cancel</i>Cancel</a>
+            </div>
+        </form>
+    </div>
 </div>
 
 {% endblock %}
