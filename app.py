@@ -20,8 +20,11 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/browse_mods')
 def browse_mods():
-    return render_template("mods.html", mods=mongo.db.mods.find().sort(
-        "mod_name"))
+    return render_template(
+                            "mods.html", mods=mongo.db.mods.find(
+                                 ).sort("mod_name"),
+                            categories=mongo.db.categories.find(
+                                ).sort("category_name"))
 
 
 # About Page
