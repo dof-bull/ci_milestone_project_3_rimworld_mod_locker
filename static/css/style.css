@@ -145,6 +145,23 @@ nav ul a {
     color: #c6c6c6;
 }
 
+/*------------- Adapted to also apply to <textarea> -------------*/
+
+/* label underline focus color */
+.input-field textarea:focus {
+    border-bottom: 1px solid #c6c6c6 !important;
+    box-shadow: 0 1px 0 0 #c6c6c6  !important;
+}
+/* valid color */
+.input-field textarea.valid {
+    border-bottom: 1px solid #c6c6c6  !important;
+    box-shadow: 0 1px 0 0 #c6c6c6  !important;
+}
+/* invalid color */
+.input-field textarea.invalid {
+    border-bottom: 1px solid #c6c6c6;
+    box-shadow: 0 1px 0 0 #c6c6c6;
+}
 
 /*------------- Buttons -------------*/
 
