@@ -177,6 +177,22 @@ div.collapsible-header.active #expander-icon {
     box-shadow: 0 1px 0 0 #c6c6c6;
 }
 
+/*------------- About Page -------------*/
+
+.about-section {
+    background-color: #14171a;
+    border-color: #313131;
+    font-family: Calibri, Tahoma, Sans Serif;
+    font-size: 100%;
+    color: #c6c6c6;
+    padding: 20px;
+}
+
+.about-image {
+    height: 100%;
+    width: 100%;
+}
+
 /*------------- Buttons -------------*/
 
 .btn_small {
