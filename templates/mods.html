@@ -6,14 +6,14 @@
 	<h3 class="page-title">{{ page_title }}</h3>
 
 	<div class="row input-dark">
-		<form action="{{url_for('insert_mod')}}" method="POST" class="col s12">
+		<form action="{{url_for('insert_mod')}}" method="POST"  class="col s12">
 			<div class="row">
 	
 				<!-- Category Selector -->
 				<div id="picker-input" class="input-field col s12 input-boxes">
 					<i class="material-icons prefix">list</i>
                         <select id="category" name="category_name">
-                                <option value="" selected>All Categories</option>
+                                <option value="">All Categories</option>
                                 {% for cat in categories %}
                                     {% if cat.category_name == category %}
                                     <option selected="selected" value="{{cat.category_name}}">{{cat.category_name}}</option>

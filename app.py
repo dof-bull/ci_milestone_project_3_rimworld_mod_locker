@@ -14,7 +14,7 @@ app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
 mongo = PyMongo(app)
 
 
-# Main Mod Page
+# Browse Mod Page
 
 
 @app.route('/')
@@ -24,8 +24,8 @@ def browse_mods():
                             "mods.html", mods=mongo.db.mods.find(
                                  ).sort("mod_name"),
                             categories=mongo.db.categories.find(
-                            ).sort("category_name"),
-                            category="Animals", page_title="Browse Mods")
+                            ).sort("category_name"), category="Animals",
+                            page_title="Browse Mods")
 
 
 # About Page
@@ -62,7 +62,8 @@ def edit_mod(mod_id):
     the_mod = mongo.db.mods.find_one({"_id": ObjectId(mod_id)})
     all_categories = mongo.db.categories.find().sort("category_name")
     return render_template(
-        'editmod.html', mod=the_mod, categories=all_categories, page_title="Edit Mods"
+                            'editmod.html', mod=the_mod,
+                            categories=all_categories, page_title="Edit Mods"
 )
 
 
