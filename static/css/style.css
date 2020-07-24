@@ -228,7 +228,7 @@ div.row.input-dark {
 .btn_red{
     background-color: #4b100c;
     font-weight: bold;
-    color: black;
+    color: #c6c6c6;
 }
 
 .btn_red i {
@@ -238,6 +238,11 @@ div.row.input-dark {
 
 .btn:hover {
     background-color: #c6c6c6;
+}
+
+.btn_red:hover {
+    background-color: #c6c6c6;
+    color: black;
 }
 
 /*------------- Footer -------------*/

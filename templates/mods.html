@@ -15,7 +15,11 @@
                         <select id="category" name="category_name">
                                 <option value="">All Categories</option>
                                 {% for cat in categories %}
-                                    <option value="{{cat.category_name}}">{{cat.category_name}}</option>
+                                    {% if cat.category_name == category %}
+                                    <option selected="selected" value="{{cat.category_name}}">{{cat.category_name}}</option>
+                                    {% else %}
+									<option value="{{cat.category_name}}">{{cat.category_name}}</option>
+                                    {% endif %}
                                 {% endfor %}
 	                    </select>
 					<label>Browse by Category</label>
@@ -26,6 +30,7 @@
 
     <ul class="collapsible">
         {% for mod in mods %}
+
         <li>
             <div class="collapsible-header">
 				<div class="col s2">
