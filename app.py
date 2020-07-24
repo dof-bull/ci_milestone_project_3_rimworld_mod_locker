@@ -24,7 +24,8 @@ def browse_mods():
                             "mods.html", mods=mongo.db.mods.find(
                                  ).sort("mod_name"),
                             categories=mongo.db.categories.find(
-                            ).sort("category_name"), category="Animals", page_title="Browse Mods")
+                            ).sort("category_name"),
+                            category="Animals", page_title="Browse Mods")
 
 
 # About Page

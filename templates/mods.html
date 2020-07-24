@@ -11,9 +11,9 @@
 	
 				<!-- Category Selector -->
 				<div id="picker-input" class="input-field col s12 input-boxes">
-					<i class="material-icons prefix">poll</i>
+					<i class="material-icons prefix">list</i>
                         <select id="category" name="category_name">
-                                <option value="">All Categories</option>
+                                <option value="" selected>All Categories</option>
                                 {% for cat in categories %}
                                     {% if cat.category_name == category %}
                                     <option selected="selected" value="{{cat.category_name}}">{{cat.category_name}}</option>
@@ -25,6 +25,11 @@
 					<label>Browse by Category</label>
 				</div>
 			</div>
+            <div class="row">
+
+				<!-- Apply Category Filter Button -->
+				<button class="btn waves-effect waves-light btn_gold" type="submit" name="action"><i class="material-icons right">search</i>Search</button>
+            </div>
 		</form>
 	</div>
 
