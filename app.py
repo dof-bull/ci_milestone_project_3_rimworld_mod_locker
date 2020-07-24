@@ -38,6 +38,15 @@ def filter_categories():
     return redirect(url_for('browse_mods'))
 
 
+@app.route('/animals')
+def animals():
+    animalmods = mongo.db.mods.find({'category_name': 'Animals'})
+    return render_template(
+        "animals.html",
+        animalmods=animalmods,
+        page_title="Animal Mods")
+
+
 # About Page
 
 

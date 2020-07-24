@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends 'base.html'%}{% block content %}
+
+<div class="row">
+
+	<h3 class="page-title">{{ page_title }}</h3>
+    
+
+	{% for mod in animalmods %}
+
+        <p>
+			{{mod.mod_name }}
+        </p>
+
+	{% endfor %}
+
+	
+
+</div>
+
+{% endblock %}
