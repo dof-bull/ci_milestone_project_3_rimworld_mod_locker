@@ -24,7 +24,7 @@ def browse_mods():
                             "mods.html", mods=mongo.db.mods.find(
                                  ).sort("mod_name"),
                             categories=mongo.db.categories.find(
-                            ).sort("category_name"), category="Animals",
+                            ).sort("category_name"),
                             page_title="Browse Mods")
 
 
@@ -36,6 +36,7 @@ def filter_categories():
     mods = mongo.db.mods
     mods.insert_one(request.form.to_dict())
     return redirect(url_for('browse_mods'))
+
 
 # About Page
 
@@ -72,8 +73,7 @@ def edit_mod(mod_id):
     all_categories = mongo.db.categories.find().sort("category_name")
     return render_template(
                             'editmod.html', mod=the_mod,
-                            categories=all_categories, page_title="Edit Mods"
-)
+                            categories=all_categories, page_title="Edit Mods")
 
 
 @app.route('/update_mod/<mod_id>', methods=["POST"])

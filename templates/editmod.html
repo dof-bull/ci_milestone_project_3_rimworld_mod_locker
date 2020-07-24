@@ -12,7 +12,7 @@
                 <!-- Mod Name -->
                 <div class="input-field col s12">
                     <i class="material-icons prefix">build</i>
-                    <input id="mod_name" name="mod_name" type="text" class="validate" value="{{mod.mod_name}}">
+                    <input id="mod_name" name="mod_name" type="text" class="validate" value="{{mod.mod_name}}" required>
                     <label for="icon_prefix">Mod Name</label>
                 </div>
             </div>
@@ -22,7 +22,7 @@
                 <!-- Category Selector -->
                 <div id="picker-input" class="input-field col s12 input-boxes">
                     <i class="material-icons prefix">list</i>
-                    <select id="category" name="category_name">
+                    <select id="category" name="category_name" required>
                         <option value="" disabled selected>Choose Category</option>
                         {% for cat in categories %}
                             {% if cat.category_name == mod.category_name %}
@@ -41,7 +41,7 @@
                 <!-- Mod Description -->
                 <div class="input-field col s12">
                     <i class="material-icons prefix">subject</i>
-                    <textarea id="mod_description" name="mod_description" class="materialize-textarea">{{mod.mod_description}}</textarea>
+                    <textarea id="mod_description" name="mod_description" class="materialize-textarea" required>{{mod.mod_description}}</textarea>
                     <label for="icon_prefix">Mod Description</label>
                 </div>
             </div>
@@ -51,7 +51,7 @@
                 <!-- Download Link -->
                 <div class="input-field col s12">
                     <i class="material-icons prefix">link</i>
-                    <input id="mod_link" name="mod_link" type="text" class="validate" value="{{mod.mod_link}}">
+                    <input id="mod_link" name="mod_link" type="text" class="validate" value="{{mod.mod_link}}" required>
                     <label for="icon_prefix">Download Link</label>
                 </div>
             </div>
