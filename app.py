@@ -28,6 +28,15 @@ def browse_mods():
                             page_title="Browse Mods")
 
 
+# Filter on Browse Mod Page
+
+
+@app.route('/filter_categories', methods=['POST'])
+def filter_categories():
+    mods = mongo.db.mods
+    mods.insert_one(request.form.to_dict())
+    return redirect(url_for('browse_mods'))
+
 # About Page
 
 
