@@ -6,20 +6,17 @@
 	<h3 class="page-title">{{ page_title }}</h3>
 
 	<div class="row input-dark">
-		<form action="{{url_for('filter')}}" method="POST"  class="col s12">
+	{% for cat in categories %}
+		<form action="{{url_for('filter', category_name=category_name )}}" method="GET"  class="col s12">
 			<div class="row">
 	
 				<!-- Category Selector -->
 				<div id="picker-input" class="input-field col s12 input-boxes">
-					<i class="material-icons prefix">list</i>
+                    <i class="material-icons prefix">list</i>
                         <select id="category" name="category_name">
                                 <option value="">All Categories</option>
                                 {% for cat in categories %}
-                                    {% if cat.category_name == category %}
-                                    <option selected="selected" value="{{cat.category_name}}">{{cat.category_name}}</option>
-                                    {% else %}
 									<option value="{{cat.category_name}}">{{cat.category_name}}</option>
-                                    {% endif %}
                                 {% endfor %}
 	                    </select>
 					<label>Browse by Category</label>
@@ -31,6 +28,7 @@
 				<button class="btn waves-effect waves-light btn_gold" type="submit" name="action"><i class="material-icons right">search</i>Search</button>
             </div>
 		</form>
+	{% endfor %}
 	</div>
 
     <ul class="collapsible">

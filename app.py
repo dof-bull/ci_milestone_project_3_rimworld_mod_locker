@@ -31,16 +31,9 @@ def browse_mods():
 # Filter on Browse Mod Page
 
 
-@app.route('/filter_categories', methods=['POST'])
-def filter_categories():
-    mods = mongo.db.mods
-    mods.insert_one(request.form.to_dict())
-    return redirect(url_for('browse_mods'))
-
-
-@app.route('/browse_mods/filter')
-def filter():
-    filtermods = mongo.db.mods.find({'category_name': 'Animals'})
+@app.route('/browse_mods/filter/<category_name>', methods=["GET"])
+def filter(category_name):
+    filtermods = mongo.db.mods.find({'category_name': category_name})
     return render_template(
         "filter.html",
         filtermods=filtermods,
