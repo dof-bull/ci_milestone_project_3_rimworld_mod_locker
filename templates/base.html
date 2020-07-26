@@ -42,6 +42,7 @@
 						<li><a href="{{url_for('about')}}">ABOUT</a></li>
 						<li><a href="{{url_for('get_categories')}}">ADMIN</a></li>
 						<li><a target="_blank" href="https://rimworldgame.com/" rel="noopener">OFFICAL SITE</a></li>
+						<li><a href="{{url_for('index')}}">LOGIN</a></li>
 					</ul>
 					<ul class="side-nav" id="mobile-demo">
 						<li><a href="{{url_for('browse_mods')}}">HOME</a></li>
@@ -49,6 +50,7 @@
 						<li><a href="{{url_for('about')}}">ABOUT</a></li>
 						<li><a href="{{url_for('get_categories')}}">ADMIN</a></li>
 						<li><a target="_blank" href="https://rimworldgame.com/" rel="noopener">OFFICAL SITE</a></li>
+						<li><a href="{{url_for('index')}}">LOGIN</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -72,12 +74,17 @@
 		</footer>
 
         <!-- jQuery Link -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
 
 		<!-- Materialize Javascript Link -->
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+		<!-- Bootstrap Javascript Link -->
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+			integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+		</script>
 
 		<!--Custom JS Script-->
-		<script type="text/javascript" src="../static/js/script.js" async></script>
+		<script src="../static/js/script.js" async></script>
     </body>
 </html>
