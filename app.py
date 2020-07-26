@@ -1,6 +1,6 @@
 import os
 from flask import Flask, render_template, redirect, request, url_for, session
-from flask_bcrypt import Bcrypt
+import bcrypt
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from os import path
@@ -8,7 +8,6 @@ if path.exists("env.py"):
     import env
 
 app = Flask(__name__)
-bcrypt = Bcrypt(app)
 
 app.config["MONGO_DBNAME"] = os.getenv('MONGO_DBNAME')
 app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
@@ -136,7 +135,8 @@ def insert_category():
 def edit_category(category_id):
     return render_template('editcategory.html',
                            category=mongo.db.categories.find_one(
-                               {'_id': ObjectId(category_id)}), page_title="Edit Category")
+                               {'_id': ObjectId(
+                                   category_id)}), page_title="Edit Category")
 
 
 @app.route('/update_category/<category_id>', methods=['POST'])
@@ -167,9 +167,18 @@ def index():
     return render_template('index.html', page_title="Login")
 
 
-@app.route('/login')
+@app.route('/login', methods=["POST"])
 def login():
-    return ''
+    users = mongo.db.users
+    login_user = users.find_one({'name': request.form['username']})
+
+    if login_user:
+        if bcrypt.hashpw(request.form['pass'].encode('utf-8'), login_user['password']) == login_user['password']:
+            session['username'] = request.form['username']
+            return redirect(url_for('index'))
+        return 'Invalid username/password combination'
+
+    return 'Invalid username/password combination'
 
 
 @app.route('/register', methods=["POST", "GET"])
@@ -179,7 +188,7 @@ def register():
         existing_user = users.find_one({'name': request.form['username']})
 
         if existing_user is None:
-            hashpass = bcrypt.hashpw(request.form['pass'].encode('utf-8'), bcrypt.genSalt())
+            hashpass = bcrypt.hashpw(request.form['pass'].encode('utf-8'), bcrypt.gensalt())
             users.insert(
                 {'name': request. form['username'], 'password': hashpass})
             session['username'] = request.form['username']
