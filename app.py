@@ -156,7 +156,7 @@ def delete_category(category_id):
     return redirect(url_for('get_categories'))
 
 
-# User Login
+# User Login - based on tutorial from Pretty Printed
 
 
 @app.route('/index')
