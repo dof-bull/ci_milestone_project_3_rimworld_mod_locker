@@ -1,10 +1,11 @@
 import os
-from flask import Flask, render_template, redirect, request, url_for
+from flask import Flask, render_template, redirect, request, url_for, session
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from os import path
 if path.exists("env.py"):
     import env
+
 
 app = Flask(__name__)
 
@@ -31,9 +32,9 @@ def browse_mods():
 # Filter on Browse Mod Page
 
 
-@app.route('/browse_mods/filter/<category_name>', methods=["GET"])
-def filter(category_name):
-    filtermods = mongo.db.mods.find({'category_name': category_name})
+@app.route('/browse_mods/filter')
+def filter():
+    filtermods = mongo.db.mods.find({'category_name': "Animals"})
     return render_template(
         "filter.html",
         filtermods=filtermods,
