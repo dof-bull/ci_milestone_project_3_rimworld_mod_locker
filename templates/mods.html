@@ -7,7 +7,7 @@
 
 	<div class="row input-dark">
 	{% for cat in categories %}
-		<form action="{{url_for('filter', category_name=category_name )}}" method="GET"  class="col s12">
+		<form action="{{url_for('filter', category_name=category_name )}}" method="POST"  class="col s12">
 			<div class="row">
 	
 				<!-- Category Selector -->

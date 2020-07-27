@@ -19,7 +19,7 @@ mongo = PyMongo(app)
 
 
 @app.route('/')
-@app.route('/browse_mods')
+@app.route('/browse_mods', methods=['POST'])
 def browse_mods():
     return render_template(
                             "mods.html", mods=mongo.db.mods.find(
@@ -32,9 +32,10 @@ def browse_mods():
 # Filter on Browse Mod Page
 
 
-@app.route('/browse_mods/filter')
+@app.route('/browse_mods/filter', methods=['POST'])
 def filter():
-    filtermods = mongo.db.mods.find({'category_name': "Animals"})
+    filtermods = mongo.db.mods.find(
+        {'category_name': request.form.get('category_name')})
     return render_template(
         "filter.html",
         filtermods=filtermods,
