@@ -160,12 +160,12 @@ def delete_category(category_id):
 # User Login - based on tutorial from Pretty Printed
 
 
-@app.route('/index')
-def index():
+@app.route('/signIn')
+def signIn():
     if 'username' in session:
         return 'You are logged in as ' + session['username']
 
-    return render_template('index.html', page_title="Login")
+    return render_template('signIn.html', page_title="Login")
 
 
 @app.route('/login', methods=["POST"])
@@ -176,7 +176,7 @@ def login():
     if login_user:
         if bcrypt.hashpw(request.form['pass'].encode('utf-8'), login_user['password']) == login_user['password']:
             session['username'] = request.form['username']
-            return redirect(url_for('index'))
+            return redirect(url_for('signIn'))
         return 'Invalid username/password combination'
 
     return 'Invalid username/password combination'
@@ -193,7 +193,7 @@ def register():
             users.insert(
                 {'name': request. form['username'], 'password': hashpass})
             session['username'] = request.form['username']
-            return redirect(url_for('index'))
+            return redirect(url_for('signIn'))
 
         return 'That username already exists'
 
