@@ -98,7 +98,7 @@ The user's goal is to have a quick and convenient way of finding new mods for Ri
  
 ###### Browse Mods
  
-![Home Page](static/wireframes/mainpage.png)
+![Home Page](static/wireframes/home.png)
  
 ###### Add Mod
  
