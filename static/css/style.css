@@ -1,13 +1,13 @@
 /*------------- Main Elements -------------*/
 
 * {
-    font-family: Calibri, Tahoma, Sans Serif;
+    font-family: Calibri, Tahoma, "Sans Serif";
     font-size: 100%;
     color: #c6c6c6;
 }
 
 body {
-    font-family: Calibri, Tahoma, Sans Serif;
+    font-family: Calibri, Tahoma, "Sans Serif";
     background-color: #000000;
     background-image: url(https://rimworldgame.com//images/BGPlanet2.jpg);
     background-repeat: no-repeat;
@@ -33,7 +33,7 @@ flex: 1 0 auto;
 }
 
 nav img {
-    width: 1m;
+    width: 1em;
     height: 1em;
     margin-right: 5px;
 }
@@ -191,7 +191,7 @@ div.row.input-dark {
 .about-section {
     background-color: #14171a;
     border-color: #313131;
-    font-family: Calibri, Tahoma, Sans Serif;
+    font-family: Calibri, Tahoma, "Sans Serif";
     font-size: 100%;
     color: #c6c6c6;
     padding: 20px;
@@ -257,10 +257,10 @@ footer.page-footer {
 }
 
 .page-footer p {
-    font-family: Calibri, Tahoma, Sans Serif;
+    font-family: Calibri, Tahoma, "Sans Serif";
     font-size: 100%;
     color: #c6c6c6;
-    padding: 0, 0;
+    padding: 0 0;
     text-decoration: none;
 }
 

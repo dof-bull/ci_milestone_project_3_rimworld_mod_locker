@@ -13,7 +13,7 @@
 				<div id="picker-input" class="input-field col s12 input-boxes">
 					<i class="material-icons prefix">list</i>
 					<select id="category" name="category_name">
-                                <option value="">All Categories</option>
+                                <option value="">Select Category</option>
                                 {% for cat in categories %}
                                     {% if cat.category_name == category %}
                                     <option selected="selected" value="{{cat.category_name}}">{{cat.category_name}}</option>
@@ -21,7 +21,7 @@
 									<option value="{{cat.category_name}}">{{cat.category_name}}</option>
                                     {% endif %}
                                 {% endfor %}
-	                    </select>
+	                </select>
 					<label>Browse by Category</label>
 				</div>
 			</div>
