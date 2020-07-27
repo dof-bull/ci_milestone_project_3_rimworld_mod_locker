@@ -67,15 +67,33 @@ The user's goal is to have a quick and convenient way of finding new mods for Ri
  
 #### Design Choices
  
-- **Font:** Calibri was chosen as an excellent option for a safe, universally readable sans-serif font. This is also the font used within the game itself so the player base would make an association with it.
-- **Icons:** The icons were all chosen for their obvious, commonly used meanings. The cursor was chosen to highlight the story of Noah's Ark without making it too biblical for a growing secular audience.
-- **Colours:** The colours were chosen to continue the jungle and bush themes created by the background image, grass and vine imagery and rustling noises.
-- **Styling:** Colours were kept as consistent as possible with also taking in visibility vs the background into consideration.
-- **Backgrounds:** The tropical image was chosen to continue the tropical jungle theme as encouraged by the audio, animal choices and plant graphics.
-- **Card Images:** The choice of the animals was to gently encourage the Noah's Ark theme which to the developer seemed like a natural "two by two" pairing formula. Several other animal images such as a lion were originally used but then discarded when it was realized the mating pair don't look the same as each other.
-- **Audio Files:** The Caribbean themed song was chosen as it was upbeat and fun without any distracting lyrics. The victory song continued the Caribbean theme while sounding a lot more martine. The game-over storm music was chosen to add a little shock factor and make avoiding a game over something to be desired. The bush rustling sound worked well to give the illusion of the 'searching each bush with your staff (cursor)'.
+**Font** 
+- Calibri was chosen as an excellent option for a safe, universally readable sans-serif font. This is also the font used within the game itself so the player base would make an association with it.
+
+**Icons** 
+- The icons were all chosen for their obvious, commonly used meanings.
+
+**Colours** 
+- The colours were chosen to based off colours and themes used within the game itself plus to help make the site look like an extension of the [official Rimworld website](https://rimworldgame.com/) though with noticeable references that it is fan-made and not directly affliated. 
+- The darker elements of the game with its blacks and greys  help add to the atmosphere of bleakness that a disaster in the game can invoke.
+- The shade of red used for the delete buttons is actually directly used with raiders in the game so that colour would be associated with destruction for regular player.
+- Likewise the shade of gold chosen for some of the 'positive' buttons such as create is accosication with positive things happening and rewards.
+- The off white colour chosen was taken from the game logo and is often used in post apocalyptic worlds for old tech.
+
+**Styling** 
+  - Colours were kept as consistent as possible with also taking in visibility vs the background into consideration. 
+  - Where visibility was semi-problematic, a more visible lighter hover effect was added so these buttons would be more visible.
+  - Changing the font from black to white was considered for several buttons but was decided agaisnt as looked too off-theme.
+  - The hyperlink text decoration on the links of each mod was kept on purpose as highlighted it was a link plus the contrast of the hyperlink blue against the grey background drop and white font looked very 'old world tech'.
+
+**Backgrounds:** 
+- The background planet was chosen to have a consistent image among all pages and its subtle fade to black at the bottom goes unnoticed if the page length gets considerably long.
+- This image also paired up with the parent, official site.
+
+**Audio Files:** 
+- No audio files were deemed necessary for this project and would just slow down loading speeds while being a distraction.
  
-#### Wireframes
+#### Wireframes ------NEED TO ADD------
  
 ###### Main Page
  
