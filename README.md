@@ -66,7 +66,7 @@ The user's goal is to have a quick and convenient way of finding new mods for Ri
 - As a mod maker of Rimworld, I want somewhere to show off my newly created mod.
  
 #### Design Choices
- Rimworld Mod Locker was designed to be desktop focused, as opposed to mobile focused, as the time when most users would be looking for new mods would be when they are running the game itself (which requires a desktop). 
+Rimworld Mod Locker was designed to be desktop focused, as opposed to mobile focused, as the time when most users would be looking for new mods would be when they are running the game itself (which requires a desktop). 
 
 **Font** 
 - Calibri was chosen as an excellent option for a safe, universally readable sans-serif font. This is also the font used within the game itself so the player base would make an association with it.
@@ -82,10 +82,10 @@ The user's goal is to have a quick and convenient way of finding new mods for Ri
 - The off white colour chosen was taken from the game logo and is often used in post apocalyptic worlds for old tech.
 
 **Styling** 
-  - Colours were kept as consistent as possible with also taking in visibility vs the background into consideration. 
-  - Where visibility was semi-problematic, a more visible lighter hover effect was added so these buttons would be more visible.
-  - Changing the font from black to white was considered for several buttons but was decided against as looked too off-theme.
-  - The hyperlink text decoration on the links of each mod was kept on purpose as it highlighted that it was a link plus the contrast of the hyperlink blue against the grey background drop and white font looked very 'old world tech'.
+- Colours were kept as consistent as possible with also taking in visibility vs the background into consideration. 
+- Where visibility was semi-problematic, a more visible lighter hover effect was added so these buttons would be more visible.
+- Changing the font from black to white was considered for several buttons but was decided against as looked too off-theme.
+- The hyperlink text decoration on the links of each mod was kept on purpose as it highlighted that it was a link plus the contrast of the hyperlink blue against the grey background drop and white font looked very 'old world tech'.
 
 **Backgrounds:** 
 - The background planet was chosen to have a consistent image among all pages and its subtle fade to black at the bottom goes unnoticed if the page length gets considerably long.
@@ -130,8 +130,6 @@ This project uses HTML, CSS and JavaScript programming languages.
     - The project uses **Google fonts** to style the website fonts.
 - [GitHub](https://github.com/)
     - This project uses **GitHub** to store and share all project code remotely. 
-- [Photoshop](www.adobe.com/Photoshop)
-    - This project used tools in **Photohshop** to edit, crop and save images as well as utilising the colour picker to ensure color consistency over the entire project.
 - [AutoPrefixer](https://autoprefixer.github.io/)
     - The project used **AutoPrefixer** to make sure all css prefixes were the most up to date versions. 
  
