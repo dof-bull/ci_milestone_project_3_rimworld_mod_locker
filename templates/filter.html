@@ -6,7 +6,7 @@
 	<h3 class="page-title">{{ page_title }}</h3>
 
 	<div class="row input-dark">
-		<form action="{{url_for('filter')}}" method="POST" class="col s12">
+		<form action="{{url_for('filter', category_name=category_name )}}" method="POST" class="col s12">
 			<div class="row">
 
 				<!-- Category Selector -->

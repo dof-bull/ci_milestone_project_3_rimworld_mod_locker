@@ -19,7 +19,7 @@ mongo = PyMongo(app)
 
 
 @app.route('/')
-@app.route('/browse_mods', methods=['POST'])
+@app.route('/browse_mods')
 def browse_mods():
     return render_template(
                             "mods.html", mods=mongo.db.mods.find(
