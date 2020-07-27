@@ -94,16 +94,40 @@ The user's goal is to have a quick and convenient way of finding new mods for Ri
 **Audio Files:** 
 - No audio files were deemed necessary for this project and would just slow downloading speeds while being a distraction.
  
-#### Wireframes ------NEED TO ADD------
+#### Wireframes
  
-###### Main Page
+###### Browse Mods
  
-![Main Page wireframe](assets/images/mainpage.jpg)
+![Home Page](static/wireframes/mainpage.png)
  
-###### Contact Form
+###### Add Mod
  
-![Contact Form wireframe](assets/images/contactform.jpg)
+![Add Mod Page](static/wireframes/addMod.png)
  
+###### Edit Mod
+ 
+![Edit Mod Page](static/wireframes/editMod.png)
+
+###### Add Mod
+ 
+![Add Mod Page](static/wireframes/addMod.png)
+
+###### About Page
+ 
+![About Page](static/wireframes/about.png)
+
+###### Admin
+ 
+![Admin Page](static/wireframes/admin.png)
+
+###### Login
+ 
+![Login Page](static/wireframes/login.png)
+
+###### Register
+ 
+![Register Page](static/wireframes/register.png)
+
 ## Features
  
 #### Existing Features
@@ -120,6 +144,7 @@ The user's goal is to have a quick and convenient way of finding new mods for Ri
 - Change access levels where standard users can only add new mods so can't delete, edit or access the 'Admin' section.
 - Change access levels where admin users are able to have full functionality over the site.
 - Search bar for individual mods. 
+- Optimize the site for mobile use.
  
 ## Technologies Used
  
