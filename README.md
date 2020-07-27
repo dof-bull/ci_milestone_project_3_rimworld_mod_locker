@@ -108,10 +108,6 @@ The user's goal is to have a quick and convenient way of finding new mods for Ri
  
 ![Edit Mod Page](static/wireframes/editMod.png)
 
-###### Add Mod
- 
-![Add Mod Page](static/wireframes/addMod.png)
-
 ###### About Page
  
 ![About Page](static/wireframes/about.png)
