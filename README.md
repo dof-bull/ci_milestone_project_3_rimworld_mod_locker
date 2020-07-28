@@ -84,7 +84,7 @@ The user's goal is to have a quick and convenient way of finding new mods for Ri
 **Styling** 
   - Colours were kept as consistent as possible with also taking in visibility vs the background into consideration. 
   - Where visibility was semi-problematic, a more visible lighter hover effect was added so these buttons would be more visible.
-  - Changing the font from black to white was considered for several buttons but was decided against as it looked too off-theme.
+  - Changing the font from black to white was considered for several buttons but was decided against as it looked too off-theme. Eventually the gold use in the other button was chosen as it was more visible but still fitted in with the other elements of the page.
   - The hyperlink text decoration on the links of each mod was kept on purpose as it highlighted that it was a link plus the contrast of the hyperlink blue against the grey background drop and white font looked very 'old world tech'.
 
 **Backgrounds:** 
