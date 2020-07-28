@@ -15,7 +15,7 @@
 					<select id="category" name="category_name">
                                 <option value="">Select Category</option>
                                 {% for cat in categories %}
-                                    {% if cat.category_name == category %}
+                                    {% if cat.category_name == category_selected %}
                                     <option selected="selected" value="{{cat.category_name}}">{{cat.category_name}}</option>
                                     {% else %}
 									<option value="{{cat.category_name}}">{{cat.category_name}}</option>

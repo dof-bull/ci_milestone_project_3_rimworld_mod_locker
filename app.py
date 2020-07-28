@@ -22,11 +22,10 @@ mongo = PyMongo(app)
 @app.route('/browse_mods')
 def browse_mods():
     return render_template(
-                            "mods.html", mods=mongo.db.mods.find(
-                                 ).sort("mod_name"),
-                            categories=mongo.db.categories.find(
-                            ).sort("category_name"),
-                            page_title="Browse Mods")
+        "mods.html",
+        mods=mongo.db.mods.find().sort("mod_name"),
+        categories=mongo.db.categories.find().sort("category_name"),
+        page_title="Browse Mods")
 
 
 # Filter on Browse Mod Page
@@ -39,8 +38,8 @@ def filter():
     return render_template(
         "filter.html",
         filtermods=filtermods,
-        categories=mongo.db.categories.find(
-        ).sort("category_name"),
+        categories=mongo.db.categories.find().sort("category_name"),
+        category_selected=request.form.get('category_name'),
         page_title="Browse Mods")
 
 
