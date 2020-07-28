@@ -84,7 +84,7 @@ nav ul a {
 }
 
 .subheadings{
-    color: #14171a;
+    color: #dbd469;
     font-weight: bold;
 }
 
@@ -228,12 +228,12 @@ div.row.input-dark {
 .btn_red{
     background-color: #4b100c;
     font-weight: bold;
-    color: black;
+    color: #dbd469;
 }
 
 .btn_red i {
     font-weight: bold;
-    color: black;
+    color: #dbd469;
 }
 
 .btn:hover {
